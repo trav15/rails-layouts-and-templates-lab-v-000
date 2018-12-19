@@ -4,16 +4,16 @@ RSpec.describe StoreAdminController, type: :controller do
   include Capybara::DSL
   render_views
 
-  # describe "GET home" do
-  #   it "renders the home template with admin layout" do
-  #     visit 'admin/home'
+  describe "GET home" do
+    it "renders the home template with admin layout" do
+      visit 'admin/home'
 
-  #     expect(response).to render_template("home")
-  #     expect(response).to render_template("layouts/admin")
+      expect(response).to render_template("home")
+      expect(response).to render_template("layouts/admin")
 
-  #     expect(page.find("h1").text).to eq("Flatiron Widgets: Admin")
-  #     expect(page.find("h2").text).to eq("Welcome Flatiron Admin")
-  #   end
+      expect(page.find("h1").text).to eq("Flatiron Widgets: Admin")
+      expect(page.find("h2").text).to eq("Welcome Flatiron Admin")
+    end
   end
 
   describe "GET orders" do
